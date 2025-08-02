@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimalist Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .problem .cta-button {
+        background-color: #28a745;
+        border: none;
+        color: white;
+        padding: 12px 28px;
+        font-size: 16px;
+        margin-top: 30px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        animation: blink 1.5s infinite;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .problem .cta-button:hover {
+        background-color: #FFF;
+        color: #007BFF;
+        border: 2px solid #007BFF;
+    }
+
+    .problem {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+
+    .problem::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2022/09/15/01/05/surgical-equipment-7455447_1280.jpg') no-repeat center center;
+      background-size: cover;
+      filter: blur(3px);
+      z-index: -1;
+    }
+
+    .problem > * {
+      z-index: 1;
+      position: relative;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .problem h1 {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .problem ul {
+      list-style: disc;
+      padding-left: 20px;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 40px;
+      color: black;
+    }
+
+    .two-column img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      flex: 1;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .impact .text,
+    .solution .text,
+    .our-solution .text {
+    text-align: justify;
+    }
+
+    .cta {
+      text-align: center;
+      background: #007BFF;
+      color: white;
+      position: relative;
+      padding-top: 80px;
+    }
+
+    .cta button {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      animation: blink 1.5s infinite;
+      transition: all 0.3s ease;
+    }
+
+    .cta button:hover {
+      background-color: #FFF;
+      color: #007BFF;
+      border: 2px solid #007BFF;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .arrow {
+      font-size: 40px;
+      animation: bounce 1.2s infinite;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+    ul li {
+        list-style-type: none;
+    }
+    .pprob {
+        font-size: 20px;
+    }
+    ul {
+        list-style-type: none; /* Menghilangkan bullet point */
+        padding-left: 0; /* Menghilangkan indentasi default */
+    }
+
+    li {
+        margin-bottom: 5px; /* Memberikan jarak 10px di bawah setiap item */
+    }
+    a {
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="problem fade-in">
+    <h1>Luka Operasi yang Tak Kunjung Pulih</h1>
+    <p class="pprob">Setelah menjalani operasi, khususnya operasi Caesar, banyak pasien mengalami masalah yang tidak mudah:</p>
+    <ul>
+      <li>Luka yang tetap terasa nyeri meski sudah berminggu-minggu</li>
+      <li>Rasa perih dan panas di sekitar bekas sayatan</li>
+      <li>Sulit bergerak atau beraktivitas seperti biasa</li>
+      <li>Hal ini membuat banyak pasien merasa frustrasi dan bertanya-tanya: “Kenapa lukaku belum sembuh juga?”</li>
+    </ul>
+    <a href="https://wa.me/62895342670087" class="cta-button">Dapatkan Solusinya Sekarang</a>
+  </section>
+
+  <section class="impact two-column fade-in">
+    <img src="https://cdn.pixabay.com/photo/2020/05/15/18/46/coronavirus-5174671_1280.jpg" alt="Impact Image" />
+    <div class="text">
+      <h1>⚠️ Risiko Infeksi, Stres, dan Biaya yang Terus Bertambah</h1>
+      <p>Luka pasca operasi yang tak kunjung sembuh bukan hanya menjadi masalah fisik semata. Rasa nyeri yang terus-menerus, sensasi perih di area luka, dan keterbatasan dalam bergerak membuat banyak pasien merasa sangat tidak nyaman dalam menjalani aktivitas sehari-hari. Namun lebih dari itu, luka yang lama sembuh juga dapat menimbulkan komplikasi serius seperti infeksi, yang berisiko memperburuk kondisi kesehatan secara keseluruhan.</p>
+
+<p>Sering kali, pasien harus bolak-balik ke rumah sakit untuk melakukan kontrol, membersihkan luka, atau bahkan menjalani perawatan lanjutan karena luka tak kunjung kering atau justru memburuk. Hal ini tentu menguras banyak waktu, tenaga, dan biaya yang tidak sedikit—belum lagi rasa khawatir yang terus menghantui. Beban mental dan emosional pun menjadi tak terhindarkan, baik bagi pasien itu sendiri maupun keluarga yang merawat. Rasa cemas, stres, dan kelelahan menjadi bagian dari proses yang terasa sangat berat.</p>
+
+<p>Ini bukan lagi soal luka yang terlihat di permukaan kulit. Ini adalah tentang bagaimana luka itu memengaruhi keseluruhan kualitas hidup—secara fisik, emosional, dan finansial. Karena setiap luka yang tak kunjung pulih, membawa dampak yang jauh lebih besar dari yang terlihat.</p>
+    </div>
+  </section>
+
+  <section class="solution two-column fade-in" style="flex-direction: row-reverse;">
+    <img src="https://cdn.pixabay.com/photo/2022/12/19/06/58/stethoscope-7664841_960_720.jpg" alt="Solution Image" />
+    <div class="text">
+      <h1>💸 SOLUSI YANG ADA – Perawatan Medis Mahal dan Tidak Praktis</h1>
+      <p>Luka operasi yang tak kunjung sembuh bukan hanya menimbulkan rasa nyeri dan ketidaknyamanan yang mengganggu aktivitas sehari-hari, tetapi juga dapat membawa dampak serius bagi kesehatan secara keseluruhan. Salah satu risiko terbesar adalah terjadinya infeksi lanjutan di area luka yang, jika tidak ditangani dengan cepat dan tepat, bisa menjadi sangat berbahaya. Tak jarang, pasien harus kembali bolak-balik ke rumah sakit untuk melakukan perawatan tambahan, rawat jalan, atau bahkan menjalani prosedur medis lanjutan yang tidak direncanakan sebelumnya.</p>
+
+</p>Semua proses itu tentu memerlukan waktu, tenaga, dan biaya yang tidak sedikit. Pengeluaran medis yang terus bertambah bisa menjadi beban berat, apalagi jika pasien harus berhenti bekerja atau kehilangan pendapatan selama masa pemulihan. Di sisi lain, ketegangan mental dan emosional pun ikut meningkat. Rasa cemas, frustrasi, bahkan keputusasaan sering kali muncul—baik dari pasien sendiri maupun dari keluarga yang merawat. Situasi ini bukan sekadar soal menyembuhkan luka secara fisik, tapi tentang bagaimana luka tersebut memengaruhi kualitas hidup secara keseluruhan—baik secara fisik, mental, maupun finansial.</p>
+    </div>
+  </section>
+
+  <section class="our-solution two-column fade-in">
+    <img src="https://cdn.pixabay.com/photo/2024/12/15/15/58/ai-generated-9268941_1280.jpg" alt="Our Solution Image" />
+    <div class="text">
+      <h1>🌿 SOLUSI KAMI – Kapsul Ekstrak Ikan Kutuk: Penyembuhan Alami dari Dalam</h1>
+      <p>Kami memperkenalkan Kapsul Ekstrak Ikan Kutuk (Channa striata) — solusi alami yang membantu mempercepat proses penyembuhan luka dari dalam tubuh.</p>
+      <ul>
+        <li>✅ Dikenal dalam pengobatan tradisional sebagai penyembuh luka alami</li>
+        <li>✅ Kandungan albumin tinggi untuk regenerasi sel lebih cepat</li>
+        <li>✅ 100% alami, tanpa bahan kimia berbahaya</li>
+        <li>✅ Sudah digunakan oleh ribuan pasien pasca operasi, termasuk Caesar</li>
+      </ul>
+      <p>Kini Anda tidak perlu bingung atau takut luka tak sembuh lagi.</p>
+      <p>Hanya 1 Langkah Lagi Menuju Kesembuhan biidznillah. Klik Tombol Dibawah Ini</p>
+    </div>
+  </section>
+
+  <section class="cta fade-in">
+    <div class="arrow">👇</div>
+    <button><a href="https://wa.me/62895342670087">Dapatkan Solusinya! Klik Disini </a></button>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
