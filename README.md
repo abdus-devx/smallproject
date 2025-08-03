@@ -1,5 +1,4 @@
 # smallproject
-Repo LP Porto CompanyProfile dkk
 
 📝 Project Title
 Template Landing Page Minimalis_V1.0
