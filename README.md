@@ -1,4 +1,5 @@
-# smallproject
+# capstoneProjectHactiv8LP
+
 
 📝 Project Title
 Template Landing Page Minimalis_V1.0
